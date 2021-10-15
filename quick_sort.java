@@ -1,75 +1,60 @@
-class GFG{
-      
-
-static void swap(int[] arr, int i, int j)
-{
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-  
-
-static int partition(int[] arr, int low, int high)
-{
-      
-   
-    int pivot = arr[high]; 
-      
-   
-    int i = (low - 1); 
-  
-    for(int j = low; j <= high - 1; j++)
-    {
-          
-      
-        if (arr[j] < pivot) 
-        {
-              
-          
-            i++; 
-            swap(arr, i, j);
-        }
+public class QuickSort {
+ 
+    static int[] ar = { 2, 1, 9, 5, 3, 8, 4 };
+    public static void main(String[] args) {
+           
+           System.out.print("Display array before Quick sorting: "  );
+           for (int i = 0; i < ar.length; i++)
+                  System.out.print(ar[i] +" ");
+           
+           quickSort(0, ar.length - 1);
+           
+           System.out.print("\nDisplay array after Quick sorting: "  );
+           for (int i = 0; i < ar.length; i++)
+                  System.out.print(ar[i] +" ");
+            
     }
-    swap(arr, i + 1, high);
-    return (i + 1);
-}
-  
-/* The main function that implements QuickSort
-          arr[] --> Array to be sorted,
-          low --> Starting index,
-          high --> Ending index
- */
-static void quickSort(int[] arr, int low, int high)
-{
-    if (low < high) 
-    {
-          
     
-        int pi = partition(arr, low, high);
-  
-  
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+    
+    /*
+     * method performs quick sort in java.
+     */
+    public static void quickSort(int left, int right) {
+           if (right - left <= 0) // size <= 1,
+                  return; // means array is already sorted.
+           else{
+                  int pivot = ar[right]; // rightmost item
+                  int partition = partitionArray(pivot, left, right); //find out partition range.
+                  quickSort(left, partition - 1);   // sort the left side.
+                  quickSort(partition + 1, right); // sort the right side.
+           }
     }
-}
-  
-
-static void printArray(int[] arr, int size)
-{
-    for(int i = 0; i < size; i++)
-        System.out.print(arr[i] + " ");
-          
-    System.out.println();
-}
-  
-
-public static void main(String[] args)
-{
-    int[] arr = { 10, 7, 8, 9, 1, 5 };
-    int n = arr.length;
-      
-    quickSort(arr, 0, n - 1);
-    System.out.println("Sorted array: ");
-    printArray(arr, n);
-}
+    
+    //partition of array in java
+    public static  int partitionArray(int pivot, int left, int right) {
+           int leftIndicator = left - 1;
+           int rightIndicator = right;
+           while (true) {
+                  // find bigger element.
+                  while(ar[++leftIndicator] < pivot);          //execute while loop till -> elements are smaller than pivot, as soon as bigger element is found we stop while loop.
+           
+                  // find smaller element.
+                  while(rightIndicator>0 && ar[--rightIndicator]>pivot);//execute while loop till -> elements are greater than pivot, as soon as smaller element is found we stop while loop.
+                        
+                  if (leftIndicator >= rightIndicator) // if pointers have crossed, partition have been done, break.
+                        break;
+                  else
+                        swapElements(leftIndicator, rightIndicator); //If we haven't crossed swap the elements.
+           }
+           
+           swapElements(leftIndicator, right); // restoring the pivot.
+           return leftIndicator; //return restored pivot location.
+    }
+    
+    public static void swapElements(int pos1, int pos2){
+           int temp = ar[pos1];
+           ar[pos1] = ar[pos2];
+           ar[pos2] = temp;
+    }
+    
 }
