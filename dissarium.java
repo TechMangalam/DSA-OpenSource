@@ -17,7 +17,7 @@ class DISSARIUM
         if(sum==n)
         System.out.println("Dissarium number="+n);
         else
-        System.out.println("Not Dissarium number="+n);
+        System.out.println("Not Dissarium number="+n); //this is latest update
     }
 }
         
