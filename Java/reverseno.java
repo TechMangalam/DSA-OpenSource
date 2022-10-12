@@ -8,7 +8,7 @@ import java.util.*;
      int n=scn.nextInt();
      while(n!=0)
      {
-         System.out.println(n%10);
+         System.out.println(n%10);//This is working fine and updated.
          n=n/10;
      }
     }
