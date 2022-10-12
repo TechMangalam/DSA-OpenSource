@@ -14,7 +14,7 @@ class BinarySearch{
         binarySearch(arr,mid+1,high,k);
       }
     }else{
-      System.out.println("Element not found");
+      System.out.println("Element not found"); //Binary search working fine(DJ)
       return;
     }
   }
