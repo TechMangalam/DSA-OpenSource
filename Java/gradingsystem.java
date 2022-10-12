@@ -18,7 +18,7 @@ import java.util.*;
       else if(marks>60)
       System.out.print("meets expectations");
       else 
-      System.out.print("below par");
+      System.out.print("below par");//thiss is old school grading system
       
   
    }
