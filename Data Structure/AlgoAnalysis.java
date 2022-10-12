@@ -264,7 +264,7 @@ class AlgoAnalysis{
                 //System.out.println("Search element for best  case--> "+a[5000]+"\n");
                 //System.out.println("Search element for worst  case--> "+40000+"\n");
                 //System.out.println("Search element for average case--> "+a[2500]+"\n");
-                //System.out.println("Search element for random case--> "+searchArrayRandom[i]+"  ");
+                //System.out.println("Search element for random case--> "+searchArrayRandom[i]+"  ");// This was the update for hacktoberfest 2022 (Abhyuday-> approve it)
                 
                 
             
