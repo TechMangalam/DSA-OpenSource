@@ -24,3 +24,4 @@ int main()
     cin>>a>>n;
     cout<<bin_exp(a,n);
 }
+//Good
