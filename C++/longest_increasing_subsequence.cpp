@@ -32,7 +32,7 @@ int lis(int a[],int n)
 int main()
 {
 	int a[]={0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
-	// Here the longest increasing subsequnce is {0, 2, 6, 9, 11, 15}
+	// longest increasing subsequnce is {0, 2, 6, 9, 11, 15}
 	cout<<"The length of longest increasing subsequence is "<<lis(a,sizeof(a)/sizeof(a[0]))<<"\n";
 	return 0;
 } 
