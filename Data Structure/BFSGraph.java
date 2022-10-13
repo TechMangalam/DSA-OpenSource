@@ -24,7 +24,7 @@ public class BFSGraph {
     boolean visited[] = new boolean[V];
 
     LinkedList<Integer> queue = new LinkedList();
-
+//see below
     visited[s] = true;
     queue.add(s);
 
