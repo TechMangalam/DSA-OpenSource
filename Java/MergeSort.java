@@ -53,6 +53,6 @@ class MergeSort {
 		int arr[] = { 22, 74, 98, 72, 24, 34, 90, 10, 68, 15, 57,  6, 47};
 		MergeSort.mergeSort(arr, arr.length);
 
-		printArray(arr);
+		printArray(arr);//this is merge sort
 	}
 }
