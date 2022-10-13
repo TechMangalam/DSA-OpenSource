@@ -6,4 +6,5 @@ def pairs(k, arr):
     for i in arr:
         if (k+i) in freq:
             count+=1
-    return count
+ #end
+return count
