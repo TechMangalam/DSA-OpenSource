@@ -54,7 +54,7 @@ class ShellSort
 		ob.sort(arr);
 
 		System.out.println("Array after sorting");
-		printArray(arr);
+		printArray(arr); //Perfectly working
 	}
 }
 
