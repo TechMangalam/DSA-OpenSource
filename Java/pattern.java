@@ -14,7 +14,7 @@ public class Main {
             {
                 System.out.print("*	");
             }
-            System.out.println();//This is pattern program updated version
+            System.out.println();//This is pattern program updated version and again updated
         }
 
     }
