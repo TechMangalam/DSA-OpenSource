@@ -22,7 +22,7 @@ public class Main {
         if (count==0)
         System.out.println("prime");
         else
-        System.out.println("not prime");//This program is still working fine
+        System.out.println("not prime");//This program is still working fine and nothing patched yet
     }
 
     
