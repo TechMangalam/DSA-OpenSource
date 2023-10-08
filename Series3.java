@@ -5,7 +5,7 @@ class Series3
         int i=1;
         while(i<=10)
         {
-            System.out.println(i*2-1+"/"+(i*2));
+            System.out.println(i*2-1+"/"+(i*2)); //worthyful series.
             i++;
         }
     }
